@@ -1,0 +1,93 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/025/240/original/background-image1.jpg?1642700870");
+  background-position: left;
+  font-family: Poppins, sans-serif;
+}
+
+h1 {
+  color: #eb5e0b;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer {
+  color: #eb5e0b;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0;
+  padding: 15px 0 0 0;
+  text-align: center;
+}
+
+.weather-app {
+  background-color: #fff;
+  border: (1, solid, #fff);
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.general-info {
+  color: #c2daff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  max-width: 50%;
+  padding: 0 0 0 20px;
+}
+
+.current-weather {
+  margin: 0;
+  padding: 30px 0 0 0;
+  max-width: 50%;
+  text-align: center;
+}
+
+.current-weather .main-icon {
+  color: #c2daff;
+  font-size: 50px;
+}
+
+.current-weather h2 {
+  color: #eb5e0b;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.current-weather .max-min {
+  color: #eb5e0b;
+  font-size: 16px;
+}
+
+.forecast {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.week-day {
+  color: #0d6efd;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.forecast-icon {
+  color: #c2daff;
+  font-size: 30px;
+}
+
+.forecast-temp {
+  color: #0d6efd;
+  font-size: 16px;
+}
