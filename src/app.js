@@ -63,7 +63,20 @@ function handleSubmit(event) {
   search(document.querySelector("#city-input").value);
 }
 
+function getPosition(position) {
+  let apiKey = "47b6364afb2ed8bf7f7344ac4ea61231";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayCurrentData);
+}
+
+function getCurrentLocation(event) {
+  navigator.geolocation.getCurrentPosition(getPosition);
+}
+
 search("São Paulo");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let positionButton = document.querySelector("#position-button");
+positionButton.addEventListener("click", getCurrentLocation);
