@@ -22,22 +22,14 @@
     <div class="weather-app">
       <div class="row">
         <div class="col-xxl-auto general-info">
-          <h1>
-            São Paulo
-          </h1>
+          <h1 id="city"></h1>
           <ul>
             <li>
               Monday 13:44
             </li>
-            <li>
-              Clouds
-            </li>
-            <li>
-              Humidity: 65%
-            </li>
-            <li>
-              Wind: 2.57 m/s
-            </li>
+            <li id="description"></li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> m/s</li>
           </ul>
         </div>
         <div class="col-xs-auto current-weather">
@@ -45,11 +37,9 @@
           <ul>
             <li><i class="fas fa-cloud main-icon"></i></li>
             <li>
-              <h2>29 °C</h2>
+              <h2><span id="main-temp"></span>°C</h2>
             </li>
-            <li class="max-min">
-              32°/24°
-            </li>
+            <li class="max-min"><span id="max-temp"></span>°/<span id="min-temp"></span>°</li>
           </ul>
 
         </div>
