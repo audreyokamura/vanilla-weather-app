@@ -11,6 +11,8 @@
     href="https://fonts.googleapis.com/css2?family=Delius&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/c2e4a2ca8d.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <link rel="stylesheet" href="src/style.css">
   <title>Weather App</title>
 </head>
@@ -19,7 +21,7 @@
   <div class="container">
     <div class="weather-app">
       <div class="row">
-        <div class="col-sm-6 general-info">
+        <div class="col-xxl-auto general-info">
           <h1>
             São Paulo
           </h1>
@@ -38,18 +40,18 @@
             </li>
           </ul>
         </div>
-        <div class="clearfix current-weather">
-          <div class="col-sm-6">
-            <ul>
-              <li><i class="fas fa-cloud main-icon"></i></li>
-              <li>
-                <h2>29 °C</h2>
-              </li>
-              <li class="max-min">
-                32°/24°
-              </li>
-            </ul>
-          </div>
+        <div class="col-xs-auto current-weather">
+
+          <ul>
+            <li><i class="fas fa-cloud main-icon"></i></li>
+            <li>
+              <h2>29 °C</h2>
+            </li>
+            <li class="max-min">
+              32°/24°
+            </li>
+          </ul>
+
         </div>
         <div class="row forecast-row">
           <div class="col forecast">
