@@ -20,6 +20,21 @@
 <body>
   <div class="container">
     <div class="weather-app">
+      <form id="search-form" class="mb-3">
+        <div class="row justify-content">
+          <div class="col-9">
+            <input type="search" placeholder="Type a city..." id="city-input" class="form-control city-search"
+              autocomplete="off">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary search-button"><i class="fas fa-search"></i></button>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn current-button" id="position-button"><i
+                class="fas fa-map-marker-alt"></i></button>
+          </div>
+        </div>
+      </form>
       <div class="row">
         <div class="col-xxl-auto general-info">
           <h1 id="city"></h1>
