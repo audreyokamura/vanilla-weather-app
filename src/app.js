@@ -41,6 +41,15 @@ function displayCurrentData(response) {
   document.querySelector("#time").innerHTML = formatDate(
     response.data.dt * 1000
   );
+  document
+    .querySelector("#current-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#current-icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "47b6364afb2ed8bf7f7344ac4ea61231";
