@@ -21,6 +21,26 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col forecast">
+    <div class="forecast-day">${day}</div>
+    <i class="fas fa-cloud forecast-icon"></i>
+    <div class="forecast-temp">
+      <span class="forecast-temp-max">13</span>°/
+      <span class="forecast-temp-min">8</span>°
+    </div>
+  </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayCurrentData(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
@@ -73,10 +93,11 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(getPosition);
 }
 
-search("São Paulo");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let positionButton = document.querySelector("#position-button");
 positionButton.addEventListener("click", getCurrentLocation);
+
+search("São Paulo");
+displayForecast();
