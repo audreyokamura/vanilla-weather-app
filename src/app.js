@@ -99,7 +99,12 @@ function displayCurrentData(response) {
 function search(city) {
   let apiKey = "47b6364afb2ed8bf7f7344ac4ea61231";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayCurrentData);
+  axios
+    .get(apiUrl)
+    .then(displayCurrentData)
+    .catch(function (error) {
+      alert("Oops! 🤭️ Make sure to type a valid city name! 👍️");
+    });
 }
 
 function handleSubmit(event) {
