@@ -28,6 +28,54 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+function changeIcon(iconCode) {
+  let iconText = "";
+  if (iconCode === "01d") {
+    iconText = "fas fa-sun";
+  } else {
+    if (iconCode === "01n") {
+      iconText = "fas fa-moon";
+    } else {
+      if (iconCode === "02d") {
+        iconText = "fas fa-cloud-sun";
+      } else {
+        if (iconCode === "02n") {
+          iconText = "fas fa-cloud-moon";
+        } else {
+          if (iconCode === "03d" || iconCode === "03n") {
+            iconText = "fas fa-cloud";
+          } else {
+            if (iconCode === "04d" || iconCode === "04n") {
+              iconText = "fas fa-cloud";
+            } else {
+              if (iconCode === "09d" || iconCode === "09n") {
+                iconText = "fas fa-cloud-showers-heavy";
+              } else {
+                if (iconCode === "10d" || iconCode === "10n") {
+                  iconText = "fas fa-cloud-rain";
+                } else {
+                  if (iconCode === "11d" || iconCode === "11n") {
+                    iconText = "fas fa-poo-storm";
+                  } else {
+                    if (iconCode === "13d" || iconCode === "13n") {
+                      iconText = "fas fa-snowflake";
+                    } else {
+                      if (iconCode === "50d" || iconCode === "50n") {
+                        iconText = "fas fa-smog";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return iconText;
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -39,9 +87,7 @@ function displayForecast(response) {
         forecastHTML +
         `<div class="col forecast">
     <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
-    <img class="forecast-icon" src="http://openweathermap.org/img/wn/${
-      forecastDay.weather[0].icon
-    }@2x.png"/>
+    <i class="forecast-icon ${changeIcon(forecastDay.weather[0].icon)}"></i>
     <div class="forecast-temp">
       <span class="forecast-temp-max">${Math.round(
         forecastDay.temp.max
@@ -86,13 +132,9 @@ function displayCurrentData(response) {
   document
     .querySelector("#current-icon")
     .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      "class",
+      `main-icon ${changeIcon(response.data.weather[0].icon)}`
     );
-  document
-    .querySelector("#current-icon")
-    .setAttribute("alt", response.data.weather[0].description);
-
   getForecast(response.data.coord);
 }
 

@@ -52,13 +52,14 @@ ul {
 
 .current-weather {
   margin: 0;
-  padding: 0;
+  padding: 30px 0 0 0;
   max-width: 150px;
   text-align: center;
 }
 
 .current-weather .main-icon {
   color: #c2daff;
+  display: block;
   font-size: 50px;
 }
 
@@ -66,13 +67,14 @@ ul {
   color: #eb5e0b;
   font-size: 20px;
   font-weight: 600;
+  line-height: 1.5;
   margin: 0;
-  padding: 0;
+  padding: 15px 0 0 0;
 }
 
 .current-weather .max-min {
   color: #eb5e0b;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .forecast-row {
@@ -94,6 +96,7 @@ ul {
 
 .forecast-icon {
   color: #c2daff;
+  display: block;
   font-size: 30px;
 }
 
