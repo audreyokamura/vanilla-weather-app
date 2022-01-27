@@ -9,7 +9,7 @@ h1 {
   font-size: 34px;
   font-weight: 500;
   line-height: 40px;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   margin-top: 0;
 }
 
@@ -23,7 +23,7 @@ ul {
   border: (1, solid, #fff);
   border-radius: 10px;
   margin: 30px auto;
-  max-width: 600px;
+  max-width: 400px;
   padding: 20px;
 }
 
@@ -35,6 +35,11 @@ ul {
   display: inline;
 }
 
+.button-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .current-button {
   background: #eb5e0b;
   color: #fff;
@@ -42,8 +47,8 @@ ul {
 }
 
 .general-info {
-  color: #0d6efd;
-  font-size: 16px;
+  color: #2e75b0;
+  font-size: 14px;
   font-weight: 600;
   margin: 0;
   max-width: 70%;
@@ -52,20 +57,21 @@ ul {
 
 .current-weather {
   margin: 0;
-  padding: 30px 0 0 0;
-  max-width: 150px;
+  padding: 0;
+  max-width: 100px;
   text-align: center;
 }
 
 .current-weather .main-icon {
   color: #c2daff;
   display: block;
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .current-weather h2 {
   color: #eb5e0b;
   font-size: 20px;
+  font-style: normal;
   font-weight: 600;
   line-height: 1.5;
   margin: 0;
@@ -75,6 +81,7 @@ ul {
 .current-weather .max-min {
   color: #eb5e0b;
   font-size: 14px;
+  font-style: normal;
 }
 
 .forecast-row {
@@ -89,8 +96,9 @@ ul {
 }
 
 .forecast-day {
-  color: #0d6efd;
+  color: #2e75b0;
   font-size: 18px;
+  font-style: normal;
   font-weight: 600;
 }
 
@@ -102,13 +110,19 @@ ul {
 
 .forecast-temp {
   color: #0d6efd;
-  font-size: 16px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.forecast-temp-max {
+  font-weight: 600;
 }
 
 .footer {
   color: #eb5e0b;
   font-family: monospace;
   font-size: 10px;
+  font-style: normal;
   font-weight: 400;
   margin: 0;
   padding: 5px 0 0 0;
